@@ -1,0 +1,8 @@
+.divFetch {
+    background-color:white;
+    width:100%;
+}
+.divSection {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,26 @@
+.divCard{
+    width:400px;
+    text-align:center;
+    margin:auto;
+}
+.divCard{
+    margin-top:20px;
+    margin-bottom:30px;
+    background-color:#0d1321;
+}
+.titleCard{
+    padding:15px;
+    color:#f0ebd8;
+    background-color:#1d2d44;
+}
+.imgCard{
+    margin-top:30px;
+    width:300px;
+    height:400px;
+    border:1px solid #748cab;
+    margin-bottom:30px;
+    transition: transform .3s;
+}
+.imgCard:hover{
+    transform: scale(1.1);
+}

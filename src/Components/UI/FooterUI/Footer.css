@@ -1,0 +1,17 @@
+.fetchFooter{
+	background-color:#5C6161;
+    padding:20px;
+    text-align:center;
+    color:#f0ebd8;
+}
+.redes img{
+    margin:10px 10px 0px 10px;
+    border-radius:50%;
+    background:rgb(214, 194, 194);
+    border:1px solid rgb(201, 180, 180);
+    transition: transform .3s;
+}
+.redes img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
