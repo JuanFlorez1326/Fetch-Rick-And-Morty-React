@@ -7,11 +7,9 @@ import imgRickAndMorty from '../../../Images/1.jpg'
 
 export const Fetch = () =>
 {
-
     const URL = 'https://rickandmortyapi.com/api/character'
     const [datas, setDatas] = useState([])
     const [card, setCard] = useState()
-    const [notCard, setNotCard] = useState()
     const [data, setData] = useState(
         {
             name:"Rick And Morty", image:imgRickAndMorty
@@ -23,7 +21,7 @@ export const Fetch = () =>
             .then(response => response.json())
             .then(response => 
             { 
-                if(id != "")
+                if(id !== "")
                 {
                     setData(response)
                 }
@@ -41,7 +39,6 @@ export const Fetch = () =>
 
     const option = (element) => 
     {
-        setNotCard(1)
         if(element.target.value === 'allOptions')
         {
             setCard(1)
@@ -59,21 +56,21 @@ export const Fetch = () =>
 
     return (
         <main className="divFetch">
-            <nav>        
+            <nav className="divNavFetch">        
                 <SelectUI choose={datas} event={option} nameCard="Select Card" />
-            </nav>  
-            <section className="divSection">
-                {
-                    notCard && (                
-                        card ?          
-                            datas.map(item => (
-                                <CardUI key={item.id} data={item}/>
-                            ))
-                            :
-                            <CardUI key={data.id} data={data}/>              
-                    )
-                }
-            </section>
+            </nav>
+            <div className="divCardsFetch">
+                <section className="divSection">
+                    {
+                        (                
+                            card ?          
+                                datas.map(item => (
+                                    <CardUI key={item.id} data={item}/>
+                                )):<CardUI key={data.id} data={data}/>           
+                        )
+                    }
+                </section>
+            </div>  
         </main>
     )
 }

@@ -14,7 +14,7 @@ export const Home = () =>
                     <HeaderUI/>               
                 </div>
 
-                <div className="divCard">
+                <div className="divCards">
                     <Fetch/>
                 </div>
 
